@@ -1,4 +1,4 @@
-package com.springboot.kiomnd2.chapter3security;
+package com.springboot.kiomnd2.readingList;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

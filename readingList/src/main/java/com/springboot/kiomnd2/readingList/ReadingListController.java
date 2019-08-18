@@ -1,4 +1,4 @@
-package com.springboot.kiomnd2.chapter3security;
+package com.springboot.kiomnd2.readingList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
