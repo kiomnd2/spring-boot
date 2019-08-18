@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.springboot.kiomnd2</groupId>
-    <artifactId>chapter3-security</artifactId>
+    <artifactId>readingList</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>chapter3-security</name>
+    <name>readingList</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
