@@ -1,4 +1,4 @@
-package com.springboot.kiomnd2.readingList;
+package readinglist;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Reader reader;
     private String isbn;
@@ -17,21 +17,8 @@ public class Book {
     private String author;
     private String description;
 
-
     public Long getId() {
         return id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public void setId(Long id) {
@@ -65,4 +52,17 @@ public class Book {
     public String getAuthor() {
         return author;
     }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
