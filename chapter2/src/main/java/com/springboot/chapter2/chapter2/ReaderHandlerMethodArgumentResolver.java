@@ -1,4 +1,4 @@
-package com.springboot.kiomnd2.readingList;
+package com.springboot.chapter2.chapter2;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.security.core.Authentication;
@@ -10,13 +10,14 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 public class ReaderHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
-    public boolean supportsParameter(MethodParameter methodParameter) {
-        return Reader.class.isAssignableFrom(methodParameter.getParameterType());
+    public boolean supportsParameter(MethodParameter parameter) {
+        return Reader.class.isAssignableFrom(parameter.getParameterType());
     }
 
     @Override
-    public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
-        Authentication auth = (Authentication) nativeWebRequest.getUserPrincipal();
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+                                  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+        Authentication auth = (Authentication) webRequest.getUserPrincipal();
         return auth != null && auth.getPrincipal() instanceof Reader ? auth.getPrincipal() : null;
     }
 }

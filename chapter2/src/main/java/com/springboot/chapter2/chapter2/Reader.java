@@ -1,23 +1,23 @@
-package com.springboot.kiomnd2.readingList;
+package com.springboot.chapter2.chapter2;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Collection;
 
+@Entity
 public class Reader implements UserDetails {
-
-    private static final long serialVersionUID =1L;
+    private static final long serialVersionUID = 1L;
 
     @Id
     private String username;
     private String fullname;
     private String password;
 
-    @Override
     public String getUsername() {
         return username;
     }
@@ -34,7 +34,6 @@ public class Reader implements UserDetails {
         this.fullname = fullname;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
@@ -42,6 +41,8 @@ public class Reader implements UserDetails {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    // UserDetails 메서드
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -67,4 +68,5 @@ public class Reader implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

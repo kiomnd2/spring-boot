@@ -11,5 +11,11 @@ spring:
   profiles: development
 
 logging:
+  path: /var/logs
+  file : test.log
   level:
     root: DEBUG
+    org :
+      springframework:
+        security: DEBUG
+
